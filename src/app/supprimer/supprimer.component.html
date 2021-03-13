@@ -1,0 +1,10 @@
+<div class="div_form_add panel panel-primary col-xs-4">
+    <div class="panel-heading">remove user</div>
+    <div class="panel-body">
+        <select name="remove" class="col-xs-12 form-select" aria-label="Default select example" [(ngModel)]="selected">
+          <option  *ngFor="let u of userdel " value="{{u.id}}"> {{u.username}}</option>
+      </select>
+        <div class="col-xs-12 "> <button class="pull-right btn btn-danger" (click)="remove()">remove</button> </div>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+<app-formulaire></app-formulaire>
+<app-updateuser [userup]="users"></app-updateuser>
+<app-supprimer [userdel]="users"></app-supprimer>
+<table class="table table-striped">
+    <caption></caption>
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">USER</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">PSSWD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.username}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.password}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+<div class="div_form_add panel panel-primary col-xs-4">
+    <div class="panel-heading">update user</div>
+    <div class="panel-body">
+        <select name="remove" class="col-xs-12 form-select" aria-label="Default select example" [(ngModel)]="selected">
+           <option  *ngFor="let u of userup " value="{{u.id}}" >{{u.username}}</option>
+      </select>
+    </div>
+    <div class="panel-body">
+        <form form #f="ngForm" *ngIf="selected!=-1&&userup!=[]" (ngSubmit)="update(f)">
+            <div class="form-group">
+                <label for="username">username</label>
+                <input type="text" class="form-control" name="username" placeholder="Enter username" [(ngModel)]="getUser(selected).username">
+            </div>
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="text" class="form-control" name="email" placeholder="Enter email" [(ngModel)]="getUser(selected).email">
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="text" class="form-control" name="password" placeholder="Enter password" [(ngModel)]="getUser(selected).password">
+            </div>
+            <button type="submit" class="btn btn-primary">Valider</button>
+
+
+        </form>
+    </div>
+
+</div>
